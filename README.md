@@ -1,0 +1,4 @@
+- jika Terhubung ke Internet maka LED berwarna hijau 🟢
+- jika TIDAK terhubung ke Internet maka LED berwarna merah 🔴🔴
+- dan jika Tidak terhubung ke Internet 🔴🔴 selama 10 detik selama 5 kali berturut-turut, maka script akan menjalankan file Python untuk restart band modem Huawei.
+- jika sudah terhubung internet kembali, maka otomatis mengirim notif ke tele bahwa internet sudah kembali terhubung 🟢
