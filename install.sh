@@ -8,7 +8,8 @@ git clone https://github.com/daerax/changeBandHuaweiModem.git
 cd changeBandHuaweiModem || { echo "Gagal masuk folder repo."; exit 1; }
 
 echo "[*] Menyesuaikan file hgled..."
-sed -i "21s|.*|token=\"$token\"; chatid=\"$chatid\"|" usr/bin/hgled
+sed -i "s|<TOKEN>|${token}|g" usr/bin/hgled
+sed -i "s|<CHAT_ID>|${chatid}|g" usr/bin/hgled
 
 echo "[*] Mengecek file lama di /usr/bin/..."
 for file in hgled hgledon; do
