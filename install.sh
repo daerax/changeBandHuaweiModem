@@ -14,18 +14,18 @@ echo "[*] Mengecek file lama di /usr/bin/..."
 for file in hgled hgledon; do
     if [ -f "/usr/bin/$file" ]; then
         echo "  → Backup $file ke $file.bak"
-        sudo cp "/usr/bin/$file" "/usr/bin/$file.bak"
+        cp "/usr/bin/$file" "/usr/bin/$file.bak"
     fi
 done
 
 echo "[*] Menyalin file hgled dan hgledon ke /usr/bin/..."
-sudo cp usr/bin/hgled /usr/bin/hgled
-sudo cp usr/bin/hgledon /usr/bin/hgledon
-sudo chmod +x /usr/bin/hgled /usr/bin/hgledon
+cp usr/bin/hgled /usr/bin/hgled
+cp usr/bin/hgledon /usr/bin/hgledon
+chmod +x /usr/bin/hgled /usr/bin/hgledon
 
 echo "[*] Menyalin huawei.py dan requirements.txt ke /root/..."
-sudo cp huawei.py /root/huawei.py
-sudo cp requirements.txt /root/requirements.txt
+cp huawei.py /root/huawei.py
+cp requirements.txt /root/requirements.txt
 
 echo "[*] Menginstall dependensi Python dari /root/requirements.txt..."
 pip install --upgrade pip
