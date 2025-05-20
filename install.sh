@@ -1,7 +1,9 @@
 #!/bin/bash
 
-read -p "Masukkan Telegram BOT TOKEN: " token
-read -p "Masukkan Telegram CHAT ID: " chatid
+echo -n "Masukkan Telegram BOT TOKEN: "
+read -r token
+echo -n "Masukkan Telegram CHAT ID: "
+read -r chatid
 
 echo "[*] Mengkloning repository..."
 git clone https://github.com/daerax/changeBandHuaweiModem.git
